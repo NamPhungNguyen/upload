@@ -230,7 +230,7 @@ public class SignupForm extends javax.swing.JFrame {
             Query = "insert into users values('"+name+"','"+email+"','"+password+"','"+securityQuestion+"','"+answer+"','"+address+"','false')";
             InsertUpdateDeleyte.setData(Query, "Register Successfully");
             setVisible(false);
-            new signup().setVisible(true);
+            new SignupForm().setVisible(true);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -243,7 +243,7 @@ public class SignupForm extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new forgotPassword().setVisible(true);
+        new ForgotPasswordForm().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

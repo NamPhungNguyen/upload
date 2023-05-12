@@ -261,7 +261,7 @@ public class LoginForm extends javax.swing.JFrame {
         }else if(email.equals("admin") && password.equals("admin")){
             check = 1;
             setVisible(false);
-            new adminHome().setVisible(true);
+            new AdminHomeForm().setVisible(true);
         }else {
             ResultSet rs = select.getData("select * from users where email='"+email+"' and password='"+password+"' ");
             try{
@@ -269,7 +269,7 @@ public class LoginForm extends javax.swing.JFrame {
                     check = 1;
                     if(rs.getString(7).equals("true")){
                         setVisible(false);
-                        new home().setVisible(true);
+                        new AdminHomeForm().setVisible(true); // chỗ này là thay bằng quyền nhân viên
                     }else {
                         JOptionPane.showMessageDialog(null, "Wait For Admin Approval");
                     }
